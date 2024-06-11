@@ -78,6 +78,10 @@
     background: #0243933f;
 }
 
+.navbar ul .apply a:hover {
+    border: 2px solid #024493;
+}
+
 .content {
     font-family: Poppins;
     margin: auto;
@@ -90,7 +94,7 @@
     height: 400px;
 }
 
-.content-text h1{
+.content-text h1 {
     font-size: 100px;
 }
 
