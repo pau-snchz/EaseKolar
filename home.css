@@ -102,6 +102,7 @@
 .about-us-div {
     background: linear-gradient(180deg, rgba(255, 253, 253, 0.10) 0%, rgba(2, 68, 147, 0.20) 100%);
     backdrop-filter: blur(25px);
+    height: 100vh;
 }
 
 .about-us {
