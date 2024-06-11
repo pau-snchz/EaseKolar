@@ -22,7 +22,6 @@ body {
 .content-div {
     width: 70%;
     height: 100vh;
-    /* background-color: pink; */
 }
 
 .content {
@@ -65,7 +64,7 @@ body {
 }
 
 .apply-btn h3 {
-    width: 100%; /* Make sure h3 spans full width */
+    width: 100%;
     margin: 3vh 0;
 }
 
