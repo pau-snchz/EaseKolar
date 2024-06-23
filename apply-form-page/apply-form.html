@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="apply-form.css">
+    <link rel="shortcut icon" href="../images/logo.svg">
+    <title>EaseKolar</title>
+</head>
+<body>
+    <div class="registration-page">
+        <div class="title-logo">
+            <img src="../images/logo.svg" alt="logo img">
+            <h1><span class="blue-text">Ease</span>Kolar</h1>
+        </div>
+        <form action="../admin-page/database.html" method="GET" id="scholarship-form">
+            <!-- Personal Information Section -->
+            <div class="personal-info" id="personal-info">
+                <div class="header">
+                    <h1>Personal Information</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="p-row1">
+                    <div class="input-field">
+                        <label for="applicant-name">Applicant's Name</label>
+                        <div class="field-group">
+                            <input type="text" name="applicant-name" id="last-name" placeholder="Last Name" required>
+                            <input type="text" name="applicant-name" id="first-name" placeholder="First Name" required>
+                            <input type="text" name="applicant-name" id="middle-initial" placeholder="M.I." required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="birthdate">Birthdate</label>
+                        <input type="date" name="birthdate" id="birthdate" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="sex">Sex</label>
+                        <div class="field-group">
+                            <input type="radio" name="sex" id="female" value="Female" required>
+                            <label for="female">Female</label>
+                            <input type="radio" name="sex" id="male" value="Male" required>
+                            <label for="male">Male</label>
+                            <input type="radio" name="sex" id="non-binary" value="Non-binary" required>
+                            <label for="non-binary">Non-binary</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-row2">
+                    <div class="input-field">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" name="email-address" id="email-address" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="birthplace">Birthplace</label>
+                        <input type="text" name="birthplace" id="birthplace" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="citizenship">Citizenship</label>
+                        <input type="text" name="citizenship" id="citizenship" required>
+                    </div>
+                </div>
+                <div class="p-row3">
+                    <div class="input-field">
+                        <label for="permanent-address">Permanent Address</label>
+                        <input type="text" name="permanent-address" id="permanent-address" placeholder="House No./Unit, Street/Bldg. Name, Barangay, City" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="mailing-address">Mailing Address</label>
+                        <input type="text" name="mailing-address" id="mailing-address" placeholder="(Optional)">
+                    </div>
+                </div>
+                <div class="p-row4">
+                    <div class="input-field">
+                        <label for="phone-num">Phone No.</label>
+                        <input type="text" name="phone-num" id="phone-num" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="landline-num">Landline No.</label>
+                        <input type="text" name="landline-num" id="landline-num" placeholder="(Optional)">
+                    </div>
+                    <div class="input-field">
+                        <label for="emergency-contact-num">Emergency Contact No.</label>
+                        <input type="text" name="emergency-contact-num" id="emergency-contact-num" required>
+                    </div>
+                </div>
+                <div class="p-row5">
+                    <div class="input-field">
+                        <label for="emergency-contact-name">Emergency Contact Name</label>
+                        <div class="field-group">
+                            <input type="text" name="emergency-contact-name" id="ec-lname" placeholder="Last Name" required>
+                            <input type="text" name="emergency-contact-name" id="ec-fname" placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="grade-lvl">Grade Level Applying for</label>
+                        <select name="grade-lvl" id="grade-lvl" required>
+                            <option value=""></option>
+                            <option value="grade-7">Grade 7</option>
+                            <option value="grade-8">Grade 8</option>
+                            <option value="grade-9">Grade 9</option>
+                            <option value="grade-10">Grade 10</option>
+                            <option value="grade-11">Grade 11</option>
+                            <option value="grade-12">Grade 12</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- School Information Section -->
+            <div class="school-info" id="school-info">
+                <div class="header">
+                    <h1>School Information</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="s-row1">
+                    <div class="input-field">
+                        <label for="school-grad-from">School Graduated from</label>
+                        <input type="text" name="school-grad-from" id="school-grad-from" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="school-type">School Type</label>
+                        <div class="field-group">
+                            <input type="radio" name="school-type" id="public" value="Public" required>
+                            <label for="public">Public</label>
+                            <input type="radio" name="school-type" id="private" value="Private" required>
+                            <label for="private">Private</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-row2">
+                    <div class="input-field">
+                        <label for="school-address">School Address</label>
+                        <input type="text" name="school-address" id="school-address" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="school-email">School Email Address</label>
+                        <input type="email" name="school-email" id="school-email" required>
+                    </div>
+                </div>
+                <div class="s-row3">
+                    <div class="input-field">
+                        <label for="school-contact-num">School Contact No.</label>
+                        <input type="text" name="school-contact-num" id="school-contact-num" required>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- Parent/Guardian Information Section -->
+            <div class="pg-info" id="pg-info">
+                <div class="header">
+                    <h1>Parent/Guardian Information</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="pg-div-1" id="pg-div-1">
+                    <div class="pg-row1">
+                        <div class="input-field">
+                            <label for="parent-type">Parent Type</label>
+                            <div class="field-group">
+                                <input type="radio" name="parent-type" id="mother" value="Mother" required>
+                                <label for="mother">Mother</label>
+                                <input type="radio" name="parent-type" id="father" value="Father" required>
+                                <label for="father">Father</label>
+                                <input type="radio" name="parent-type" id="guardian" value="Guardian" required>
+                                <label for="guardian">Guardian</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pg-row2">
+                        <div class="input-field">
+                            <label for="parentguardian-name">Parent/Guardian Full Name</label>
+                            <input type="text" name="parentguardian-name" id="parentguardian-name" placeholder="First Name, Last Name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="pg-phone-num">Phone No.</label>
+                            <input type="text" name="pg-phone-num" id="pg-phone-num" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="pg-email-address">Email Address</label>
+                            <input type="email" name="pg-email-address" id="pg-email-address" required>    
+                        </div>
+                    </div>
+                    <div class="pg-row3">
+                        <div class="input-field">
+                            <label for="nature-of-work">Nature of Work</label>
+                            <div class="field-group">
+                                <input type="radio" name="nature-of-work" id="employed" value="Employed" required>
+                                <label for="employed">Employed</label>
+                                <input type="radio" name="nature-of-work" id="self-employed" value="Self-Employed" required>
+                                <label for="self-employed">Self-Employed</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pg-row4">
+                        <div class="input-field">
+                            <label for="occupation">Occupation</label>
+                            <input type="text" name="occupation" id="occupation" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" name="company-name" id="company-name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="company-address">Company Address</label>
+                            <input type="text" name="company-address" id="company-address" required>
+                        </div>
+                    </div>
+                    <div class="pg-row5">
+                        <div class="input-field">
+                            <label for="gross-annual-income">Gross Annual Income</label>
+                            <input type="text" name="gross-annual-income" id="gross-annual-income" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="highest-educational-attainment">Highest Educational Attainment</label>
+                            <input type="text" name="highest-educational-attainment" id="highest-educational-attainment" required>
+                        </div>
+                    </div>
+                    <div class="pg-row6">
+                        <div class="input-field">
+                            <label for="school-graduated-from">School Graduated from</label>
+                            <input type="text" name="school-graduated-from" id="school-graduated-from" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="pg-year-graduated">Year Graduated</label>
+                            <input type="text" name="pg-year-graduated" id="pg-year-graduated" required>
+                        </div>
+                    </div>
+                </div>
+                <hr class="pg-hr">
+                <div class="pg-div-2" id="pg-div-2">
+                    <div class="pg-row1">
+                        <div class="input-field">
+                            <label for="parent-type">Parent Type</label>
+                            <div class="field-group">
+                                <input type="radio" name="parent-type" id="mother" value="Mother">
+                                <label for="mother">Mother</label>
+                                <input type="radio" name="parent-type" id="father" value="Father">
+                                <label for="father">Father</label>
+                                <input type="radio" name="parent-type" id="guardian" value="Guardian">
+                                <label for="guardian">Guardian</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pg-row2">
+                        <div class="input-field">
+                            <label for="parentguardian-name">Parent/Guardian Full Name</label>
+                            <input type="text" name="parentguardian-name" id="parentguardian-name" placeholder="First Name, Last Name">
+                        </div>
+                        <div class="input-field">
+                            <label for="pg-phone-num">Phone No.</label>
+                            <input type="text" name="pg-phone-num" id="pg-phone-num">
+                        </div>
+                        <div class="input-field">
+                            <label for="pg-email-address">Email Address</label>
+                            <input type="email" name="pg-email-address" id="pg-email-address">    
+                        </div>
+                    </div>
+                    <div class="pg-row3">
+                        <div class="input-field">
+                            <label for="nature-of-work">Nature of Work</label>
+                            <div class="field-group">
+                                <input type="radio" name="nature-of-work" id="employed" value="Employed">
+                                <label for="employed">Employed</label>
+                                <input type="radio" name="nature-of-work" id="self-employed" value="Self-Employed">
+                                <label for="self-employed">Self-Employed</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pg-row4">
+                        <div class="input-field">
+                            <label for="occupation">Occupation</label>
+                            <input type="text" name="occupation" id="occupation">
+                        </div>
+                        <div class="input-field">
+                            <label for="company-name">Company Name</label>
+                            <input type="text" name="company-name" id="company-name">
+                        </div>
+                        <div class="input-field">
+                            <label for="company-address">Company Address</label>
+                            <input type="text" name="company-address" id="company-address">
+                        </div>
+                    </div>
+                    <div class="pg-row5">
+                        <div class="input-field">
+                            <label for="gross-annual-income">Gross Annual Income</label>
+                            <input type="text" name="gross-annual-income" id="gross-annual-income">
+                        </div>
+                        <div class="input-field">
+                            <label for="highest-educational-attainment">Highest Educational Attainment</label>
+                            <input type="text" name="highest-educational-attainment" id="highest-educational-attainment">
+                        </div>
+                    </div>
+                    <div class="pg-row6">
+                        <div class="input-field">
+                            <label for="school-graduated-from">School Graduated from</label>
+                            <input type="text" name="school-graduated-from" id="school-graduated-from">
+                        </div>
+                        <div class="input-field">
+                            <label for="pg-year-graduated">Year Graduated</label>
+                            <input type="text" name="pg-year-graduated" id="pg-year-graduated">
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- Sibling Information Section -->
+            <div class="sibling-info" id="sibling-info">
+                <div class="sibling-nls-info">
+                    <div class="header">
+                        <div class="header-text">
+                            <h1>Sibling Information</h1>
+                            <p>No Longer Studying</p>
+                        </div>
+                        <span class="line"></span>
+                    </div>
+                    <div class="snls-div">
+                        <div class="snls-div1" id="snls-div1">
+                            <div class="snls-row1">
+                                <div class="input-field">
+                                    <label for="sibling-nls-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-nls-name" id="sibling-nls-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-age">Age</label>
+                                    <input type="text" name="sibling-nls-age" id="sibling-nls-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-single" value="Single">
+                                        <label for="sibling-nls-single">Single</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-married" value="Married">
+                                        <label for="sibling-nls-married">Married</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-widowed" value="Widowed">
+                                        <label for="sibling-nls-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-divorced" value="Divorced"> 
+                                        <label for="sibling-nls-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="snls-row2">
+                                <div class="input-field">
+                                    <label for="sibling-nls-natureofwork">Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-employed" value="Employed">
+                                        <label for="sibling-nls-employed">Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-self-employed" value="Self-Employed">
+                                        <label for="sibling-nls-self-employed">Self-Employed</label>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-companyname">Company Name</label>
+                                    <input type="text" name="sibling-nls-companyname" id="sibling-nls-companyname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-highesteducationalatttainment">Highest Educational Attainment</label>
+                                    <input type="text" name="sibling-nls-highesteducationalatttainment" id="sibling-nls-highesteducationalatttainment">
+                                </div>
+                            </div>
+                            <div class="snls-row3">
+                                <div class="input-field">
+                                    <label for="sibling-nls-grossannualincome">Gross Annual Income</label>
+                                    <input type="text" name="sibling-nls-grossannualincome" id="sibling-nls-grossannualincome">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="snls-div2" id="snls-div2">
+                            <div class="snls-row1">
+                                <div class="input-field">
+                                    <label for="sibling-nls-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-nls-name" id="sibling-nls-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-age">Age</label>
+                                    <input type="text" name="sibling-nls-age" id="sibling-nls-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-single" value="Single">
+                                        <label for="sibling-nls-single">Single</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-married" value="Married">
+                                        <label for="sibling-nls-married">Married</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-widowed" value="Widowed">
+                                        <label for="sibling-nls-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-divorced" value="Divorced"> 
+                                        <label for="sibling-nls-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="snls-row2">
+                                <div class="input-field">
+                                    <label for="sibling-nls-natureofwork">Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-employed" value="Employed">
+                                        <label for="sibling-nls-employed">Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-self-employed" value="Self-Employed">
+                                        <label for="sibling-nls-self-employed">Self-Employed</label>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-companyname">Company Name</label>
+                                    <input type="text" name="sibling-nls-companyname" id="sibling-nls-companyname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-highesteducationalatttainment">Highest Educational Attainment</label>
+                                    <input type="text" name="sibling-nls-highesteducationalatttainment" id="sibling-nls-highesteducationalatttainment">
+                                </div>
+                            </div>
+                            <div class="snls-row3">
+                                <div class="input-field">
+                                    <label for="sibling-nls-grossannualincome">Gross Annual Income</label>
+                                    <input type="text" name="sibling-nls-grossannualincome" id="sibling-nls-grossannualincome">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="snls-div3" id="snls-div3">
+                            <div class="snls-row1">
+                                <div class="input-field">
+                                    <label for="sibling-nls-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-nls-name" id="sibling-nls-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-age">Age</label>
+                                    <input type="text" name="sibling-nls-age" id="sibling-nls-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-single" value="Single">
+                                        <label for="sibling-nls-single">Single</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-married" value="Married">
+                                        <label for="sibling-nls-married">Married</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-widowed" value="Widowed">
+                                        <label for="sibling-nls-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-divorced" value="Divorced"> 
+                                        <label for="sibling-nls-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="snls-row2">
+                                <div class="input-field">
+                                    <label for="sibling-nls-natureofwork">Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-employed" value="Employed">
+                                        <label for="sibling-nls-employed">Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-self-employed" value="Self-Employed">
+                                        <label for="sibling-nls-self-employed">Self-Employed</label>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-companyname">Company Name</label>
+                                    <input type="text" name="sibling-nls-companyname" id="sibling-nls-companyname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-highesteducationalatttainment">Highest Educational Attainment</label>
+                                    <input type="text" name="sibling-nls-highesteducationalatttainment" id="sibling-nls-highesteducationalatttainment">
+                                </div>
+                            </div>
+                            <div class="snls-row3">
+                                <div class="input-field">
+                                    <label for="sibling-nls-grossannualincome">Gross Annual Income</label>
+                                    <input type="text" name="sibling-nls-grossannualincome" id="sibling-nls-grossannualincome">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="snls-div4" id="snls-div4">
+                            <div class="snls-row1">
+                                <div class="input-field">
+                                    <label for="sibling-nls-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-nls-name" id="sibling-nls-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-age">Age</label>
+                                    <input type="text" name="sibling-nls-age" id="sibling-nls-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-single" value="Single">
+                                        <label for="sibling-nls-single">Single</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-married" value="Married">
+                                        <label for="sibling-nls-married">Married</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-widowed" value="Widowed">
+                                        <label for="sibling-nls-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-divorced" value="Divorced"> 
+                                        <label for="sibling-nls-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="snls-row2">
+                                <div class="input-field">
+                                    <label for="sibling-nls-natureofwork">Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-employed" value="Employed">
+                                        <label for="sibling-nls-employed">Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-self-employed" value="Self-Employed">
+                                        <label for="sibling-nls-self-employed">Self-Employed</label>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-companyname">Company Name</label>
+                                    <input type="text" name="sibling-nls-companyname" id="sibling-nls-companyname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-highesteducationalatttainment">Highest Educational Attainment</label>
+                                    <input type="text" name="sibling-nls-highesteducationalatttainment" id="sibling-nls-highesteducationalatttainment">
+                                </div>
+                            </div>
+                            <div class="snls-row3">
+                                <div class="input-field">
+                                    <label for="sibling-nls-grossannualincome">Gross Annual Income</label>
+                                    <input type="text" name="sibling-nls-grossannualincome" id="sibling-nls-grossannualincome">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="snls-div5" id="snls-div5">
+                            <div class="snls-row1">
+                                <div class="input-field">
+                                    <label for="sibling-nls-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-nls-name" id="sibling-nls-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-age">Age</label>
+                                    <input type="text" name="sibling-nls-age" id="sibling-nls-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-single" value="Single">
+                                        <label for="sibling-nls-single">Single</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-married" value="Married">
+                                        <label for="sibling-nls-married">Married</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-widowed" value="Widowed">
+                                        <label for="sibling-nls-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-nls-civilstatus" id="sibling-nls-divorced" value="Divorced"> 
+                                        <label for="sibling-nls-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="snls-row2">
+                                <div class="input-field">
+                                    <label for="sibling-nls-natureofwork">Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-employed" value="Employed">
+                                        <label for="sibling-nls-employed">Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork" id="sibling-nls-self-employed" value="Self-Employed">
+                                        <label for="sibling-nls-self-employed">Self-Employed</label>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-companyname">Company Name</label>
+                                    <input type="text" name="sibling-nls-companyname" id="sibling-nls-companyname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-highesteducationalatttainment">Highest Educational Attainment</label>
+                                    <input type="text" name="sibling-nls-highesteducationalatttainment" id="sibling-nls-highesteducationalatttainment">
+                                </div>
+                            </div>
+                            <div class="snls-row3">
+                                <div class="input-field">
+                                    <label for="sibling-nls-grossannualincome">Gross Annual Income</label>
+                                    <input type="text" name="sibling-nls-grossannualincome" id="sibling-nls-grossannualincome">
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            <hr class="snls-sss-hr">
+                <div class="sibling-ss-info">
+                    <div class="header">
+                        <div class="header-text">
+                            <h1>Sibling Information</h1>
+                            <p>Still Studying</p>
+                        </div>
+                        <span class="line"></span>
+                    </div>
+                    <div class="sss-div">
+                        <div class="sss-div1" id="sss-div1">
+                            <div class="sss-row1">
+                                <div class="input-field">
+                                    <label for="sibling-sss-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-sss-name" id="sibling-sss-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-age">Age</label>
+                                    <input type="text" name="sibling-sss-age" id="sibling-sss-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-single" value="Single">
+                                        <label for="sibling-sss-single">Single</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-married" value="Married">
+                                        <label for="sibling-sss-married">Married</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-widowed" value="Widowed">
+                                        <label for="sibling-sss-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-divorced" value="Divorced"> 
+                                        <label for="sibling-sss-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="sss-row2">
+                                <div class="input-field">
+                                    <label for="sibling-sss-schoolname">School Name</label>
+                                    <input type="text" name="sibling-sss-schoolname" id="sibling-sss-schoolname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-yearlvl">Year Level</label>
+                                    <input type="text" name="sibling-sss-yearlvl" id="sibling-sss-yearlvl">
+                                </div>
+                            </div>
+                            <div class="sss-row3">
+                                <div class="input-field">
+                                    <label for="sibling-sss-annualtuition">Annual Tuition</label>
+                                    <input type="text" name="sibling-sss-annualtuition" id="sibling-sss-annualtuition">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-tuitionpaidby">Tuition Paid By</label>
+                                    <input type="text" name="sibling-sss-tuitionpaidby" id="sibling-sss-tuitionpaidby">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="sss-div2" id="sss-div2">
+                            <div class="sss-row1">
+                                <div class="input-field">
+                                    <label for="sibling-sss-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-sss-name" id="sibling-sss-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-age">Age</label>
+                                    <input type="text" name="sibling-sss-age" id="sibling-sss-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-single" value="Single">
+                                        <label for="sibling-sss-single">Single</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-married" value="Married">
+                                        <label for="sibling-sss-married">Married</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-widowed" value="Widowed">
+                                        <label for="sibling-sss-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-divorced" value="Divorced"> 
+                                        <label for="sibling-sss-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="sss-row2">
+                                <div class="input-field">
+                                    <label for="sibling-sss-schoolname">School Name</label>
+                                    <input type="text" name="sibling-sss-schoolname" id="sibling-sss-schoolname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-yearlvl">Year Level</label>
+                                    <input type="text" name="sibling-sss-yearlvl" id="sibling-sss-yearlvl">
+                                </div>
+                            </div>
+                            <div class="sss-row3">
+                                <div class="input-field">
+                                    <label for="sibling-sss-annualtuition">Annual Tuition</label>
+                                    <input type="text" name="sibling-sss-annualtuition" id="sibling-sss-annualtuition">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-tuitionpaidby">Tuition Paid By</label>
+                                    <input type="text" name="sibling-sss-tuitionpaidby" id="sibling-sss-tuitionpaidby">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="sss-div3" id="sss-div3">
+                            <div class="sss-row1">
+                                <div class="input-field">
+                                    <label for="sibling-sss-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-sss-name" id="sibling-sss-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-age">Age</label>
+                                    <input type="text" name="sibling-sss-age" id="sibling-sss-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-single" value="Single">
+                                        <label for="sibling-sss-single">Single</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-married" value="Married">
+                                        <label for="sibling-sss-married">Married</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-widowed" value="Widowed">
+                                        <label for="sibling-sss-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-divorced" value="Divorced"> 
+                                        <label for="sibling-sss-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="sss-row2">
+                                <div class="input-field">
+                                    <label for="sibling-sss-schoolname">School Name</label>
+                                    <input type="text" name="sibling-sss-schoolname" id="sibling-sss-schoolname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-yearlvl">Year Level</label>
+                                    <input type="text" name="sibling-sss-yearlvl" id="sibling-sss-yearlvl">
+                                </div>
+                            </div>
+                            <div class="sss-row3">
+                                <div class="input-field">
+                                    <label for="sibling-sss-annualtuition">Annual Tuition</label>
+                                    <input type="text" name="sibling-sss-annualtuition" id="sibling-sss-annualtuition">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-tuitionpaidby">Tuition Paid By</label>
+                                    <input type="text" name="sibling-sss-tuitionpaidby" id="sibling-sss-tuitionpaidby">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="sss-div4" id="sss-div4">
+                            <div class="sss-row1">
+                                <div class="input-field">
+                                    <label for="sibling-sss-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-sss-name" id="sibling-sss-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-age">Age</label>
+                                    <input type="text" name="sibling-sss-age" id="sibling-sss-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-single" value="Single">
+                                        <label for="sibling-sss-single">Single</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-married" value="Married">
+                                        <label for="sibling-sss-married">Married</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-widowed" value="Widowed">
+                                        <label for="sibling-sss-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-divorced" value="Divorced"> 
+                                        <label for="sibling-sss-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="sss-row2">
+                                <div class="input-field">
+                                    <label for="sibling-sss-schoolname">School Name</label>
+                                    <input type="text" name="sibling-sss-schoolname" id="sibling-sss-schoolname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-yearlvl">Year Level</label>
+                                    <input type="text" name="sibling-sss-yearlvl" id="sibling-sss-yearlvl">
+                                </div>
+                            </div>
+                            <div class="sss-row3">
+                                <div class="input-field">
+                                    <label for="sibling-sss-annualtuition">Annual Tuition</label>
+                                    <input type="text" name="sibling-sss-annualtuition" id="sibling-sss-annualtuition">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-tuitionpaidby">Tuition Paid By</label>
+                                    <input type="text" name="sibling-sss-tuitionpaidby" id="sibling-sss-tuitionpaidby">
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="s-hr">
+                        <div class="sss-div5" id="sss-div5">
+                            <div class="sss-row1">
+                                <div class="input-field">
+                                    <label for="sibling-sss-name">Sibling Full Name</label>
+                                    <input type="text" name="sibling-sss-name" id="sibling-sss-name" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-age">Age</label>
+                                    <input type="text" name="sibling-sss-age" id="sibling-sss-age">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-civilstatus">Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-single" value="Single">
+                                        <label for="sibling-sss-single">Single</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-married" value="Married">
+                                        <label for="sibling-sss-married">Married</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-widowed" value="Widowed">
+                                        <label for="sibling-sss-widowed">Widowed</label>
+                                        <input type="radio" name="sibling-sss-civilstatus" id="sibling-sss-divorced" value="Divorced"> 
+                                        <label for="sibling-sss-divorced">Divorced</label>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="sss-row2">
+                                <div class="input-field">
+                                    <label for="sibling-sss-schoolname">School Name</label>
+                                    <input type="text" name="sibling-sss-schoolname" id="sibling-sss-schoolname">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-yearlvl">Year Level</label>
+                                    <input type="text" name="sibling-sss-yearlvl" id="sibling-sss-yearlvl">
+                                </div>
+                            </div>
+                            <div class="sss-row3">
+                                <div class="input-field">
+                                    <label for="sibling-sss-annualtuition">Annual Tuition</label>
+                                    <input type="text" name="sibling-sss-annualtuition" id="sibling-sss-annualtuition">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-sss-tuitionpaidby">Tuition Paid By</label>
+                                    <input type="text" name="sibling-sss-tuitionpaidby" id="sibling-sss-tuitionpaidby">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                        <button class="back-btn" id="back-btn" type="button">Back</button>
+                        <button class="next-btn" id="next-btn" type="button">Next</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Cancel and Thank you Popups -->
+            <div class="cancel-popup" id="cancel-popup">
+                <h2>Are you sure you want to cancel?</h1>
+                    <img src="../images/cancel.png" alt="cancel-icon-img">
+                    <p>Your progress will not be saved.</p>
+                    <div class="cancel-btn">
+                        <a href="../home.html" class="home-btn" id="home-btn">Go back Home</a>
+                        <button class="continue-btn" id="continue-btn" type="button">Continue</button>
+                    </div>
+            </div>
+            <div class="thankyou-popup" id="thankyou-popup">
+                <h2>Thank you!</h1>
+                <img src="../images/check.png" alt="check-icon-img">
+                <p>Good luck, future scholar!</p>
+                <a href="../home.html" class="home-btn" id="home-btn">Go back Home</a>
+            </div>
+            <!-- Scholarship Application / Submit Section -->
+            <div class="scholarship-application" id="scholarship-application">
+                <div class="header">
+                    <h1>Scholarship Application</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="content"><p>Do you want to submit your application?</p></div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+<script src="apply-form.js"></script>
+</body>
+</html>
