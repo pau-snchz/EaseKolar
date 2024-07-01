@@ -31,6 +31,7 @@ body {
 }
 
 .title-logo h1 {
+    font-weight: 600;
     font-size: 35px;
 }
 
@@ -46,7 +47,7 @@ body {
 .buttons button {
     font-family: Poppins;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     color: #024493;
     background: white;
     width: 150px;
@@ -92,7 +93,7 @@ input[type=submit]:hover {
     box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
 }
  
-.ar-btngroup {
+/* .ar-btngroup {
     display: flex;
     margin: 0 0 25px 0;
 }
@@ -151,7 +152,7 @@ input[type=submit]:hover {
 
 .remove-btn:hover {
     box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
-}
+} */
 
 .header {
     display: flex;
@@ -166,7 +167,7 @@ input[type=submit]:hover {
 }
 
 .header h1 {
-    font-weight: 50;
+    font-weight: 300;
     margin: 0 20px 0 0;
 }
 
@@ -208,17 +209,10 @@ form .field-group label {
     margin: 0 0 25px 0;
 }
 
-.p-row1 #last-name, .p-row1 #first-name{
-    width: 150px;
-}
-
-.p-row1 #middle-initial {
-    width: 30px;
-}
-
 .p-row1 .input-field {
     display: flex;
     flex-direction: column;
+    width: 300px;
 }
 
 .p-row2 {
@@ -258,23 +252,19 @@ form .field-group label {
     display: flex;
     flex-direction: column;
     width: 300px;
-}
+}   
 
 .p-row5 {
     display: flex;
     justify-content: space-between;
-    width: 1000px;
+    width: 650px;
     margin: 0 0 25px 0;
 }
 
 .p-row5 .input-field {
     display: flex;
     flex-direction: column;
-    width: 475px;
-}   
-
-.p-row5 .field-group input {
-    width: 200px;
+    width: 300px;
 }
 
 .school-info {    
@@ -583,7 +573,7 @@ form .field-group label {
 .cancel-btn button {
     font-family: Poppins;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 600;
     color: #024493;
     background: white;
     width: 150px;

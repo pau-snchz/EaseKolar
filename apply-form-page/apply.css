@@ -47,6 +47,7 @@ body {
 }
 
 .title-logo h1 {
+    font-weight: 600;
     font-size: 50px;
 }
 
@@ -64,6 +65,7 @@ body {
 }
 
 .apply-btn h3 {
+    font-weight: 600;
     width: 100%;
     margin: 3vh 0;
 }

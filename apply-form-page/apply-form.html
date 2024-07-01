@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="apply-form.css">
     <link rel="shortcut icon" href="../images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>EaseKolar</title>
 </head>
 <body>
@@ -23,11 +26,7 @@
                 <div class="p-row1">
                     <div class="input-field">
                         <label for="applicant-name">Applicant's Name</label>
-                        <div class="field-group">
-                            <input type="text" name="applicant-name" id="last-name" placeholder="Last Name" required>
-                            <input type="text" name="applicant-name" id="first-name" placeholder="First Name" required>
-                            <input type="text" name="applicant-name" id="middle-initial" placeholder="M.I." required>
-                        </div>
+                        <input type="text" name="applicant-name" id="applicant-name" placeholder="First Name, M.I., Last Name" required>
                     </div>
                     <div class="input-field">
                         <label for="birthdate">Birthdate</label>
@@ -86,10 +85,7 @@
                 <div class="p-row5">
                     <div class="input-field">
                         <label for="emergency-contact-name">Emergency Contact Name</label>
-                        <div class="field-group">
-                            <input type="text" name="emergency-contact-name" id="ec-lname" placeholder="Last Name" required>
-                            <input type="text" name="emergency-contact-name" id="ec-fname" placeholder="First Name" required>
-                        </div>
+                        <input type="text" name="emergency-contact-name" id="emergency-contact-name" placeholder="First Name, Last Name" required>
                     </div>
                     <div class="input-field">
                         <label for="grade-lvl">Grade Level Applying for</label>
@@ -837,12 +833,12 @@
                         <button class="continue-btn" id="continue-btn" type="button">Continue</button>
                     </div>
             </div>
-            <div class="thankyou-popup" id="thankyou-popup">
+            <!-- <div class="thankyou-popup" id="thankyou-popup">
                 <h2>Thank you!</h1>
                 <img src="../images/check.png" alt="check-icon-img">
                 <p>Good luck, future scholar!</p>
                 <a href="../home.html" class="home-btn" id="home-btn">Go back Home</a>
-            </div>
+            </div> -->
             <!-- Scholarship Application / Submit Section -->
             <div class="scholarship-application" id="scholarship-application">
                 <div class="header">
