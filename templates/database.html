@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/database.css">
+    <link rel="shortcut icon" href="../static/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>EaseKolar | Database</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title-logo">
+            <img src="../static/images/logo.svg" alt="Logo" class="logo-img">
+            <h1><span class="blue-text">Ease</span>Kolar</h1>
+        </div>
+        <ul>
+            <li><a href="#applicant-box" id="navlink">Applicants</a></li>
+            <li><a href="#school-box" id="navlink">Schools</a></li>
+            <li><a href="#parent-box" id="navlink">Parents</a></li>
+            <li><a href="#snls-box" id="navlink">Siblings No Longer Studying</a></li>
+            <li><a href="#sss-box" id="navlink">Siblings Still Studying</a></li>
+            <li><a href="../templates/home.html" class="logout">Logout</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="spacer"></div>
+        <!-- <div class="spacer"></div> -->
+        <div class="box">
+            <h1>Applicants</h1>
+            <div class="scrollable">
+                <table>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Name</th>
+                        <th>Grade Level Applied</th>
+                        <th>Citizenship</th>
+                        <th>Sex</th>
+                        <th>Birthdate</th>
+                        <th>Birthplace</th>
+                        <th>Permanent Address</th>
+                        <th>Mailing Address</th>
+                        <th>Student Landline No</th>
+                        <th>Student Phone No</th>
+                        <th>Student Email</th>
+                        <th>Emergency Contact Name</th>
+                        <th>Emergency Contact Phone No</th>
+                        <th>School ID</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for applicant in applicants %}
+                    <tr>
+                        <td>{{ applicant.Applicant_ID }}</td>
+                        <td contenteditable="true" data-name="Applicant_Name">{{ applicant.Applicant_Name }}</td>
+                        <td contenteditable="true" data-name="GradeLvlApplied">{{ applicant.GradeLvlApplied }}</td>
+                        <td contenteditable="true" data-name="Citizenship">{{ applicant.Citizenship }}</td>
+                        <td contenteditable="true" data-name="Sex">{{ applicant.Sex }}</td>
+                        <td contenteditable="true" data-name="Birthdate">{{ applicant.Birthdate }}</td>
+                        <td contenteditable="true" data-name="Birthplace">{{ applicant.Birthplace }}</td>
+                        <td contenteditable="true" data-name="PermanentAddress">{{ applicant.PermanentAddress }}</td>
+                        <td contenteditable="true" data-name="MailingAddress">{{ applicant.MailingAddress }}</td>
+                        <td contenteditable="true" data-name="StudentLandlineNo">{{ applicant.StudentLandlineNo }}</td>
+                        <td contenteditable="true" data-name="StudentPhoneNo">{{ applicant.StudentPhoneNo }}</td>
+                        <td contenteditable="true" data-name="StudentEmail">{{ applicant.StudentEmail }}</td>
+                        <td contenteditable="true" data-name="EmergencyContactName">{{ applicant.EmergencyContactName }}</td>
+                        <td contenteditable="true" data-name="EmergencyContactPhoneNo">{{ applicant.EmergencyContactPhoneNo }}</td>
+                        <td contenteditable="true" data-name="School_ID">{{ applicant.School_ID }}</td>
+                        <td class="action-buttons">
+                            <button onclick="updateRecord('applicants', '{{ applicant.Applicant_ID }}')">Update</button>
+                            <button onclick="deleteRecord('applicants', '{{ applicant.Applicant_ID }}')">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="box" id="school-box">
+            <h1>Schools</h1>
+            <div class="scrollable">
+                <table>
+                    <tr>
+                        <th>School ID</th>
+                        <th>School Name</th>
+                        <th>School Type</th>
+                        <th>School Address</th>
+                        <th>School Email</th>
+                        <th>School Phone No</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for school in schools %}
+                    <tr>
+                        <td>{{ school.School_ID }}</td>
+                        <td contenteditable="true" data-name="SchoolName">{{ school.SchoolName }}</td>
+                        <td contenteditable="true" data-name="SchoolType">{{ school.SchoolType }}</td>
+                        <td contenteditable="true" data-name="SchoolAddress">{{ school.SchoolAddress }}</td>
+                        <td contenteditable="true" data-name="SchoolEmail">{{ school.SchoolEmail }}</td>
+                        <td contenteditable="true" data-name="SchoolPhoneNo">{{ school.SchoolPhoneNo }}</td>
+                        <td class="action-buttons">
+                            <button onclick="updateRecord('schools', '{{ school.School_ID }}')">Update</button>
+                            <button onclick="deleteRecord('schools', '{{ school.School_ID }}')">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="box" id="parent-box">
+            <h1>Parents</h1>
+            <div class="scrollable">
+                <table>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Parent ID</th>
+                        <th>Parent Type</th>
+                        <th>Name</th>
+                        <th>Contact No</th>
+                        <th>Email</th>
+                        <th>Nature of Work</th>
+                        <th>Occupation</th>
+                        <th>Company Name</th>
+                        <th>Company Address</th>
+                        <th>Gross Annual Income</th>
+                        <th>Highest Educ Attainment</th>
+                        <th>School Graduated From</th>
+                        <th>Year Graduated</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for parent in parents %}
+                    <tr>
+                        <td>{{ parent.Applicant_ID }}</td>
+                        <td>{{ parent.Parent_ID }}</td>
+                        <td contenteditable="true" data-name="ParentType">{{ parent.ParentType }}</td>
+                        <td contenteditable="true" data-name="PrName">{{ parent.PrName }}</td>
+                        <td contenteditable="true" data-name="PrContactNo">{{ parent.PrContactNo }}</td>
+                        <td contenteditable="true" data-name="PrEmail">{{ parent.PrEmail }}</td>
+                        <td contenteditable="true" data-name="PrNatureOfWork">{{ parent.PrNatureOfWork }}</td>
+                        <td contenteditable="true" data-name="PrOccupation">{{ parent.PrOccupation }}</td>
+                        <td contenteditable="true" data-name="PrCompanyName">{{ parent.PrCompanyName }}</td>
+                        <td contenteditable="true" data-name="PrCompanyAddress">{{ parent.PrCompanyAddress }}</td>
+                        <td contenteditable="true" data-name="PrGrossAnnualIncome">{{ parent.PrGrossAnnualIncome }}</td>
+                        <td contenteditable="true" data-name="PrHighestEducAttainment">{{ parent.PrHighestEducAttainment }}</td>
+                        <td contenteditable="true" data-name="PrSchoolGradFrom">{{ parent.PrSchoolGradFrom }}</td>
+                        <td contenteditable="true" data-name="PrYearGraduated">{{ parent.PrYearGraduated }}</td>
+                        <td class="action-buttons">
+                            <button onclick="updateRecord('parents', '{{ parent.Parent_ID }}')">Update</button>
+                            <button onclick="deleteRecord('parents', '{{ parent.Parent_ID }}')">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="box" id="snls-box">
+            <h1>Siblings No Longer Studying</h1>
+            <div class="scrollable">
+                <table>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Sibling ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Civil Status</th>
+                        <th>Highest Educ Attainment</th>
+                        <th>Nature of Work</th>
+                        <th>Company</th>
+                        <th>Gross Annual Income</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for sibling_nls in siblings_nls %}
+                    <tr>
+                        <td>{{ sibling_nls.Applicant_ID }}</td>
+                        <td>{{ sibling_nls.SiblingNLS_ID }}</td>
+                        <td contenteditable="true" data-name="SbName_NLS">{{ sibling_nls.SbName_NLS }}</td>
+                        <td contenteditable="true" data-name="SbAge_NLS">{{ sibling_nls.SbAge_NLS }}</td>
+                        <td contenteditable="true" data-name="SbCivilStatus_NLS">{{ sibling_nls.SbCivilStatus_NLS }}</td>
+                        <td contenteditable="true" data-name="SbHighestEducAttainment">{{ sibling_nls.SbHighestEducAttainment }}</td>
+                        <td contenteditable="true" data-name="SbNatureOfWork">{{ sibling_nls.SbNatureOfWork }}</td>
+                        <td contenteditable="true" data-name="SbCompany">{{ sibling_nls.SbCompany }}</td>
+                        <td contenteditable="true" data-name="SbGrossAnnualIncome">{{ sibling_nls.SbGrossAnnualIncome }}</td>
+                        <td class="action-buttons">
+                            <button onclick="updateRecord('siblings_nls', '{{ sibling_nls.SiblingNLS_ID }}')">Update</button>
+                            <button onclick="deleteRecord('siblings_nls', '{{ sibling_nls.SiblingNLS_ID }}')">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="box" id="sss-box">
+            <h1>Siblings Still Studying</h1>
+            <div class="scrollable">
+                <table>
+                    <tr>
+                        <th>Applicant ID</th>
+                        <th>Sibling ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Civil Status</th>
+                        <th>Year Level</th>
+                        <th>School Name</th>
+                        <th>Annual Tuition</th>
+                        <th>Tuition Paid By</th>
+                        <th>Actions</th>
+                    </tr>
+                    {% for sibling_ss in siblings_ss %}
+                    <tr>
+                        <td>{{ sibling_ss.Applicant_ID }}</td>
+                        <td>{{ sibling_ss.SiblingSS_ID }}</td>
+                        <td contenteditable="true" data-name="SbName_SS">{{ sibling_ss.SbName_SS }}</td>
+                        <td contenteditable="true" data-name="SbAge_SS">{{ sibling_ss.SbAge_SS }}</td>
+                        <td contenteditable="true" data-name="SbCivilStatus_SS">{{ sibling_ss.SbCivilStatus_SS }}</td>
+                        <td contenteditable="true" data-name="SbYearLevel">{{ sibling_ss.SbYearLevel }}</td>
+                        <td contenteditable="true" data-name="SbSchoolName">{{ sibling_ss.SbSchoolName }}</td>
+                        <td contenteditable="true" data-name="SbAnnualTuition">{{ sibling_ss.SbAnnualTuition }}</td>
+                        <td contenteditable="true" data-name="SbTuitionPaidBy">{{ sibling_ss.SbTuitionPaidBy }}</td>
+                        <td class="action-buttons">
+                            <button onclick="updateRecord('siblings_ss', '{{ sibling_ss.SiblingSS_ID }}')">Update</button>
+                            <button onclick="deleteRecord('siblings_ss', '{{ sibling_ss.SiblingSS_ID }}')">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <!-- Query descriptions and buttons -->
+        <div class="box">
+            <h1>SQL Statements</h1>
+            <div class="query-container">
+                <table>
+                    <tr>
+                        <th>Difficulty</th>
+                        <th>Description</th>
+                        <th>Action</th>
+                    </tr>
+                    <!-- Easy Queries -->
+                    <tr>
+                        <td>Easy</td>
+                        <td>1. Display all records of the students who are applying for Junior High School.</td>
+                        <td><button onclick="executeQuery('easy1')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Easy</td>
+                        <td>2. Display all records of the students applying for Senior High School, and order the Grade Level in descending order.</td>
+                        <td><button onclick="executeQuery('easy2')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Easy</td>
+                        <td>3. Display the Applicant ID of the students whose one of the student's parents is Unemployed (Nature of Work = 'NA')</td>
+                        <td><button onclick="executeQuery('easy3')">Execute</button></td>
+                    </tr>
+                    <!-- Moderate Queries -->
+                    <tr>
+                        <td>Moderate</td>
+                        <td>4. Count the number of applicants for each grade level.</td>
+                        <td><button onclick="executeQuery('moderate1')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td>5. Display the number of applicants grouped by the school they are from.</td>
+                        <td><button onclick="executeQuery('moderate2')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td>6. Display the Applicant ID and number of its siblings who are still studying.</td>
+                        <td><button onclick="executeQuery('moderate3')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Moderate</td>
+                        <td>7. Display the Applicant ID of the students and their parents' combined gross annual income. Display only the average income that is less than 900000.</td>
+                        <td><button onclick="executeQuery('moderate4')">Execute</button></td>
+                    </tr>
+                    <!-- Difficult Queries -->
+                    <tr>
+                        <td>Difficult</td>
+                        <td>8. Display the Applicant ID, Applicant Name, and the School Name of applicants who graduated from a Science School or Public School.</td>
+                        <td><button onclick="executeQuery('difficult1')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Difficult</td>
+                        <td>9. Count the total of the siblings of each applicant. Display it together with the Applicant ID and Applicant Name</td>
+                        <td><button onclick="executeQuery('difficult2')">Execute</button></td>
+                    </tr>
+                    <tr>
+                        <td>Difficult</td>
+                        <td>10. Display the Applicant ID, Applicant Name, School Name of the students whose total income of parents is less than 900000 and is from a Public or Sciece School.</td>
+                        <td><button onclick="executeQuery('difficult3')">Execute</button></td>
+                    </tr>
+                </table>
+            </div> 
+        </div>
+         <!-- Query Results -->
+        <div class="box">
+            <div id="query-result-container">
+                <h2>Results</h2>
+                <div id="query-result"></div>
+            </div>      
+        </div>          
+    </div>
+    <script>
+        // Creates a space to a top of box when its navlink is clicked
+        document.querySelectorAll('#navlink').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop - 150, 
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        function updateRecord(table, id) {
+            const row = event.target.closest('tr');
+            const data = {};
+            row.querySelectorAll('td[contenteditable="true"]').forEach((cell) => {
+                data[cell.getAttribute('data-name')] = cell.innerText;
+            });
+    
+            fetch(`/update_record/${table}/${id}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                const queryResult = document.getElementById('query-result');
+                if (result.success) {
+                    queryResult.innerHTML = `Record with ID ${id} updated successfully.`;
+                } else {
+                    queryResult.innerHTML = `Failed to update record with ID ${id}. Error: ${result.error}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error updating record:', error);
+                document.getElementById('query-result').innerHTML = `An error occurred while updating record with ID ${id}.`;
+            });
+        }
+    
+        function deleteRecord(table, recordId) {
+            if (confirm('Are you sure you want to delete this record?')) {
+                fetch(`/delete_record/${table}/${recordId}`, {
+                    method: 'DELETE',
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        document.getElementById(`${table}-${recordId}`).remove();
+                    } else {
+                        alert('Failed to delete record: ' + data.error);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+            }
+        }
+    
+        function executeQuery(queryKey) {
+            fetch('/execute-query', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ query_name: queryKey })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultContainer = document.getElementById('query-result');
+                if (data.success) {
+                    resultContainer.innerHTML = generateTable(data.data);
+                } else {
+                    resultContainer.innerHTML = '<pre>Error: ' + data.error + '</pre>';
+                }
+            })
+            .catch(error => {
+                const resultContainer = document.getElementById('query-result');
+                resultContainer.innerHTML = '<pre>Error: ' + error + '</pre>';
+            });
+        }
+
+        function generateTable(data) {
+            if (data.length === 0) {
+                return '<p>No results found.</p>';
+            }
+
+            let html = '<table>';
+            // Generate table header
+            html += '<tr>';
+            Object.keys(data[0]).forEach(key => {
+                html += `<th>${key}</th>`;
+            });
+            html += '</tr>';
+
+            // Generate table rows
+            data.forEach(row => {
+                html += '<tr>';
+                Object.values(row).forEach(value => {
+                    html += `<td>${value}</td>`;
+                });
+                html += '</tr>';
+            });
+
+            html += '</table>';
+            return html;
+        }
+    </script>
+    <script src="../static/js/database.js"></script>
+</body>
+</html>

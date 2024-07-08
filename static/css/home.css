@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home {
+    background: url('../images/home-bg.png') no-repeat center center; 
+    background-size: cover; 
+    width: 100%;
+}
+
+.header {
+    font-family: Poppins;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-logo {
+    margin: 5vh 5vh 0 5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 175px;
+}
+
+.title-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.title-logo h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.blue-text {
+    color: #024493;
+}
+
+.navbar {
+    margin: 5vh 5vh 0 5vh;
+    font-size: 20px;
+    font-weight: 600;
+    width: 600px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    height: 100%;
+}
+
+.navbar ul li {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    color: black;    
+    text-decoration: none; 
+}
+
+.navbar ul .menu a {
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.navbar ul .apply a {
+    color: white;
+    background: #024493;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.navbar ul .menu a:hover {
+    background: #0243933f;
+}
+
+.navbar ul .apply a:hover {
+    border: 2px solid #024493;
+}
+
+.content {
+    font-family: Poppins;
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    align-items: center;
+}
+
+.content-text {
+    height: 400px;
+}
+
+.content-text h1 {
+    font-weight: 600;
+    font-size: 100px;
+}
+
+.content img {
+    width: 650px;
+    height: 650px;
+}
+
+.about-us-div {
+    background: linear-gradient(180deg, rgba(255, 253, 253, 0.10) 0%, rgba(2, 68, 147, 0.20) 100%);
+    backdrop-filter: blur(25px);
+    height: 100vh;
+}
+
+.about-us {
+    margin: auto;
+    padding: 5vh 0;
+    display: flex;
+    width: 1000px;
+    font-family: Poppins;
+}
+
+.about-us img {
+    width: 600px;
+    height: 600px;
+    margin: 0 5vh 0 0;
+}
+
+.au-content h1 {
+    font-weight: 600;
+    font-size: 100px;
+}
+
+.au-content p {
+    text-align: justify;
+}
+
+.au-content hr {
+    background: black;
+    height: 2px;
+    margin: 25px 0;
+}
+
+.objectives {
+    display: flex;
+    justify-content: space-around;
+}
+
+.objectives div {
+    border-radius: 30px;
+    background: linear-gradient(360deg, rgba(255, 253, 253, 0.10) 0%, rgba(2, 68, 147, 0.20) 100%);
+    backdrop-filter: blur(25px);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 25px 25px;
+}
+
+.objectives img {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+}
+
+.footer {
+    font-family: Poppins;
+}
+
+.f-content {
+    margin: 5vh auto;
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+}
+
+.footer .copyright {
+    margin: 5vh;
+    text-align: center;
+}
+
+.col-1 {
+    width: 300px;
+}
+
+.col-1-tl {
+    display: flex;
+    align-items: center;
+}
+
+.col-1-tl img {
+    width: 50px;
+    height: 50px;
+}
+
+.col-1-tl h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.socials img {
+    width: 40px;
+    height: 40px;
+}
+
+.col-2 {
+    text-align: right;
+    width: 300px;
+    line-height: 45px;
+}
+
+.col-2 ul li {
+    list-style-type: none;
+}
+
+.col-2 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.col-2 ul li a:hover {
+    text-decoration: underline;
+}

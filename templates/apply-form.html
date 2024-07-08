@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/apply-form.css">
+    <link rel="shortcut icon" href="../static/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>EaseKolar | Apply Form</title>
+</head>
+<body>
+    <div class="registration-page">
+        <div class="title-logo">
+            <img src="../static/images/logo.svg" alt="logo img">
+            <h1><span class="blue-text">Ease</span>Kolar</h1>
+        </div>
+        <form action="/AppForm" method="POST" id="scholarship-form">
+            <!-- Personal Information Section -->
+            <div class="personal-info" id="personal-info">
+                <div class="header">
+                    <h1>Personal Information</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="p-row1">
+                    <div class="input-field">
+                        <label for="applicant-name">Applicant's Name</label>
+                        <input type="text" name="applicant-name" id="applicant-name" placeholder="First Name, M.I., Last Name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="birthdate">Birthdate</label>
+                        <input type="date" name="birthdate" id="birthdate" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="sex">Sex</label>
+                        <div class="field-group">
+                            <input type="radio" name="sex" id="female" value="F" required>
+                            <label for="female">Female</label>
+                            <input type="radio" name="sex" id="male" value="M" required>
+                            <label for="male">Male</label>
+                            <input type="radio" name="sex" id="non-binary" value="NB" required>
+                            <label for="non-binary">Non-binary</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-row2">
+                    <div class="input-field">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" name="email-address" id="email-address" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="birthplace">Birthplace</label>
+                        <input type="text" name="birthplace" id="birthplace" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="citizenship">Citizenship</label>
+                        <input type="text" name="citizenship" id="citizenship" required>
+                    </div>
+                </div>
+                <div class="p-row3">
+                    <div class="input-field">
+                        <label for="permanent-address">Permanent Address</label>
+                        <input type="text" name="permanent-address" id="permanent-address" placeholder="House No./Unit, Street/Bldg. Name, Barangay, City" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="mailing-address">Mailing Address</label>
+                        <input type="text" name="mailing-address" id="mailing-address" placeholder="(Optional)">
+                    </div>
+                </div>
+                <div class="p-row4">
+                    <div class="input-field">
+                        <label for="phone-num">Phone No.</label>
+                        <input type="text" name="phone-num" id="phone-num" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="landline-num">Landline No.</label>
+                        <input type="text" name="landline-num" id="landline-num" placeholder="(Optional)">
+                    </div>
+                    <div class="input-field">
+                        <label for="emergency-contact-num">Emergency Contact No.</label>
+                        <input type="text" name="emergency-contact-num" id="emergency-contact-num" required>
+                    </div>
+                </div>
+                <div class="p-row5">
+                    <div class="input-field">
+                        <label for="emergency-contact-name">Emergency Contact Name</label>
+                        <input type="text" name="emergency-contact-name" id="emergency-contact-name" placeholder="First Name, Last Name" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="grade-lvl">Grade Level Applying for</label>
+                        <select name="grade-lvl" id="grade-lvl" required>
+                            <option value=""></option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- School Information Section -->
+            <div class="school-info" id="school-info">
+                <div class="header">
+                    <h1>School Information</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="s-row1">
+                    <div class="input-field">
+                        <label for="school-grad-from">School Graduated from</label>
+                        <input type="text" name="school-grad-from" id="school-grad-from" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="school-type">School Type</label>
+                        <div class="field-group">
+                            <input type="radio" name="school-type" id="public" value="Pb" required>
+                            <label for="public">Public</label>
+                            <input type="radio" name="school-type" id="private" value="Pr" required>
+                            <label for="private">Private</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-row2">
+                    <div class="input-field">
+                        <label for="school-address">School Address</label>
+                        <input type="text" name="school-address" id="school-address" required>
+                    </div>
+                    <div class="input-field">
+                        <label for="school-email">School Email Address</label>
+                        <input type="email" name="school-email" id="school-email" required>
+                    </div>
+                </div>
+                <div class="s-row3">
+                    <div class="input-field">
+                        <label for="school-contact-num">School Contact No.</label>
+                        <input type="text" name="school-contact-num" id="school-contact-num" required>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- Parent/Guardian Information Section -->
+            <div class="pg-info" id="pg-info">
+                <div class="header">
+                    <h1>Parent/Guardian Information</h1>
+                    <span class="line"></span>
+                </div>   
+                <!-- Parent/Guardian form fields -->
+                <div id="parent-guardian-container">
+                    <!-- Template for parent/guardian section -->
+                    <template id="parent-template">
+                        <div class="pg-div">
+                            <div class="pg-row1">
+                                <div class="input-field">
+                                    <label for="parent-type-{index}">Parent Type</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="parent-type-{index}" id="mother-{index}" value="MM" required>
+                                        <label for="mother-{index}">Mother</label>
+                                        <input type="radio" name="parent-type-{index}" id="father-{index}" value="FF" required>
+                                        <label for="father-{index}">Father</label>
+                                        <input type="radio" name="parent-type-{index}" id="guardian-{index}" value="GG" required>
+                                        <label for="guardian-{index}">Guardian</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pg-row2">
+                                <div class="input-field">
+                                    <label for="parentguardian-name-{index}">Parent/Guardian Full Name</label>
+                                    <input type="text" name="parentguardian-name[]" id="parentguardian-name-{index}" placeholder="First Name, Last Name" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="pg-phone-num-{index}">Phone No.</label>
+                                    <input type="text" name="pg-phone-num[]" id="pg-phone-num-{index}" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="pg-email-address-{index}">Email Address</label>
+                                    <input type="email" name="pg-email-address[]" id="pg-email-address-{index}" required>
+                                </div>
+                            </div>
+                            <div class="instruction" style="margin-bottom: 15px;">
+                                <label>If Unemployed, just put N/A and put "0" in Gross Annual Income</label>
+                            </div>
+                            <div class="pg-row3">
+                                <div class="input-field">
+                                    <label for="nature-of-work-{index}">Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="nature-of-work-{index}" id="employed-{index}" value="E">
+                                        <label for="employed-{index}">Employed</label>
+                                        <input type="radio" name="nature-of-work-{index}" id="self-employed-{index}" value="SE">
+                                        <label for="self-employed-{index}">Self-Employed</label>
+                                        <input type="radio" name="nature-of-work-{index}" id="na-{index}" value="NA">
+                                        <label for="na-{index}">N/A</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pg-row4">
+                                <div class="input-field">
+                                    <label for="occupation-{index}">Occupation</label>
+                                    <input type="text" name="occupation[]" id="occupation-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label for="company-name-{index}">Company Name</label>
+                                    <input type="text" name="company-name[]" id="company-name-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label for="company-address-{index}">Company Address</label>
+                                    <input type="text" name="company-address[]" id="company-address-{index}">
+                                </div>
+                            </div>
+                            <div class="pg-row5">
+                                <div class="input-field">
+                                    <label for="gross-annual-income-{index}">Gross Annual Income</label>
+                                    <input type="text" name="gross-annual-income[]" id="gross-annual-income-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label for="highest-educational-attainment-{index}">Highest Educational Attainment</label>
+                                    <input type="text" name="highest-educational-attainment[]" id="highest-educational-attainment-{index}" required>
+                                </div>
+                            </div>
+                            <div class="pg-row6">
+                                <div class="input-field">
+                                    <label for="school-graduated-from-{index}">School Graduated from</label>
+                                    <input type="text" name="school-graduated-from[]" id="school-graduated-from-{index}" required>
+                                </div>
+                                <div class="input-field">
+                                    <label for="pg-year-graduated-{index}">Year Graduated</label>
+                                    <input type="text" name="pg-year-graduated[]" id="pg-year-graduated-{index}" required>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="pg-hr">
+                    </template>
+                </div>
+                <button type="button" class="add-btn" id="add-parent-btn">Add Another Parent/Guardian</button>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- Sibling Information Section -->
+            <div class="sibling-info" id="sibling-info">
+                <!-- Sibling No Longer Studying Section -->
+                <div class="header">
+                    <div class="header-text">
+                        <h1>Sibling Information</h1>
+                        <p>No Longer Studying</p>
+                    </div>
+                    <span class="line"></span>
+                </div>
+                <div id="sibling-nls-container">
+                    <div class="instruction" style="margin-bottom: 15px;">
+                        <label>If Unemployed, just put N/A and put "0" in Gross Annual Income</label>
+                    </div>
+                    <template id="sibling-nls-template">
+                        <div class="sibling-nls">
+                            <div class="snls-row1">
+                                <div class="input-field">
+                                    <label for="sibling-nls-name-{index}">Sibling Full Name</label>
+                                    <input type="text" name="sibling-nls-name[{index}]" id="sibling-nls-name-{index}" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-age-{index}">Age</label>
+                                    <input type="text" name="sibling-nls-age[{index}]" id="sibling-nls-age-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label>Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-civilstatus-{index}" id="sibling-nls-single-{index}" value="S">
+                                        <label for="sibling-nls-single-{index}">Single</label>
+                                        <input type="radio" name="sibling-nls-civilstatus-{index}" id="sibling-nls-married-{index}" value="M">
+                                        <label for="sibling-nls-married-{index}">Married</label>
+                                        <input type="radio" name="sibling-nls-civilstatus-{index}" id="sibling-nls-widowed-{index}" value="W">
+                                        <label for="sibling-nls-widowed-{index}">Widowed</label>
+                                        <input type="radio" name="sibling-nls-civilstatus-{index}" id="sibling-nls-divorced-{index}" value="D">
+                                        <label for="sibling-nls-divorced-{index}">Divorced</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="snls-row2">
+                                <div class="input-field">
+                                    <label>Nature of Work</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-nls-natureofwork-{index}" id="sibling-nls-employed-{index}" value="E">
+                                        <label for="sibling-nls-employed-{index}">Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork-{index}" id="sibling-nls-self-employed-{index}" value="SE">
+                                        <label for="sibling-nls-self-employed-{index}">Self-Employed</label>
+                                        <input type="radio" name="sibling-nls-natureofwork-{index}" id="sibling-nls-self-employed-{index}" value="NA">
+                                        <label for="sibling-nls-self-employed-{index}">N/A</label>
+                                    </div>
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-companyname-{index}">Company Name</label>
+                                    <input type="text" name="sibling-nls-companyname[{index}]" id="sibling-nls-companyname-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-nls-highesteducationalattainment-{index}">Highest Educational Attainment</label>
+                                    <input type="text" name="sibling-nls-highesteducationalattainment[{index}]" id="sibling-nls-highesteducationalattainment-{index}">
+                                </div>
+                            </div>
+                            <div class="snls-row3">
+                                <div class="input-field">
+                                    <label for="sibling-nls-grossannualincome-{index}">Gross Annual Income</label>
+                                    <input type="text" name="sibling-nls-grossannualincome[{index}]" id="sibling-nls-grossannualincome-{index}">
+                                </div>
+                            </div>
+                            <hr class="s-hr">
+                        </div>
+                    </template>
+                </div>
+                <button type="button" class="add-btn" id="add-sibling-nls-btn">Add Another Sibling (No Longer Studying)</button>
+                <!-- Sibling Still Studying Section -->
+                <div class="header">
+                    <div class="header-text">
+                        <h1>Sibling Information</h1>
+                        <p>Still Studying</p>
+                    </div>
+                    <span class="line"></span>
+                </div>
+                <div id="sibling-ss-container">
+                    <template id="sibling-ss-template">
+                        <div class="sibling-ss">
+                            <div class="sss-row1">
+                                <div class="input-field">
+                                    <label for="sibling-ss-name-{index}">Sibling Full Name</label>
+                                    <input type="text" name="sibling-ss-name[{index}]" id="sibling-ss-name-{index}" placeholder="First Name, Last Name">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-ss-age-{index}">Age</label>
+                                    <input type="text" name="sibling-ss-age[{index}]" id="sibling-ss-age-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label>Civil Status</label>
+                                    <div class="field-group">
+                                        <input type="radio" name="sibling-ss-civilstatus-{index}" id="sibling-ss-single-{index}" value="S">
+                                        <label for="sibling-ss-single-{index}">Single</label>
+                                        <input type="radio" name="sibling-ss-civilstatus-{index}" id="sibling-ss-married-{index}" value="M">
+                                        <label for="sibling-ss-married-{index}">Married</label>
+                                        <input type="radio" name="sibling-ss-civilstatus-{index}" id="sibling-ss-widowed-{index}" value="W">
+                                        <label for="sibling-ss-widowed-{index}">Widowed</label>
+                                        <input type="radio" name="sibling-ss-civilstatus-{index}" id="sibling-ss-divorced-{index}" value="D">
+                                        <label for="sibling-ss-divorced-{index}">Divorced</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sss-row2">
+                                <div class="input-field">
+                                    <label for="sibling-ss-yearlvl-{index}">Year Level</label>
+                                    <input type="text" name="sibling-ss-yearlvl[{index}]" id="sibling-ss-yearlvl-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-ss-schoolname-{index}">School Name</label>
+                                    <input type="text" name="sibling-ss-schoolname[{index}]" id="sibling-ss-schoolname-{index}">
+                                </div>
+                            </div>
+                            <div class="sss-row3">
+                                <div class="input-field">
+                                    <label for="sibling-ss-annualtuition-{index}">Annual Tuition</label>
+                                    <input type="text" name="sibling-ss-annualtuition[{index}]" id="sibling-ss-annualtuition-{index}">
+                                </div>
+                                <div class="input-field">
+                                    <label for="sibling-ss-tuitionpaidby-{index}">Tuition Paid By</label>
+                                    <input type="text" name="sibling-ss-tuitionpaidby[{index}]" id="sibling-ss-tuitionpaidby-{index}">
+                                </div>
+                            </div>
+                            <hr class="s-hr">
+                        </div>
+                    </template>
+                </div>
+                <button type="button" class="add-btn" id="add-sibling-ss-btn">Add Another Sibling (Still Studying)</button>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <button class="next-btn" id="next-btn" type="button">Next</button>
+                </div>
+            </div>
+            <!-- Cancel and Thank you Popups -->
+            <div class="cancel-popup" id="cancel-popup">
+                <h2>Are you sure you want to cancel?</h2>
+                <img src="../static/images/cancel.png" alt="cancel-icon-img">
+                <p>Your progress will not be saved.</p>
+                <div class="cancel-btn">
+                    <a href="../templates/home.html" class="home-btn" id="home-btn">Go back Home</a>
+                    <button class="continue-btn" id="continue-btn" type="button">Continue</button>
+                </div>
+            </div>
+            <div class="thankyou-popup" id="thankyou-popup">
+                <h2>Thank you!</h1>
+                <img src="../static/images/check.png" alt="check-icon-img">
+                <p>Good luck, future scholar!</p>
+                <a href="../templates/home.html" class="home-btn" id="home-btn">Go back Home</a>
+            </div>
+            <!-- Scholarship Application / Submit Section -->
+            <div class="scholarship-application" id="scholarship-application">
+                <div class="header">
+                    <h1>Scholarship Application</h1>
+                    <span class="line"></span>
+                </div>
+                <div class="content"><p>Do you want to submit your application?</p></div>
+                <div class="buttons">
+                    <button class="cancel-btn" id="cancel-btn" type="button">Cancel</button>
+                    <button class="back-btn" id="back-btn" type="button">Back</button>
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script src="../static/js/apply-form.js"></script>
+</body>
+</html>

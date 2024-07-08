@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Poppins;
+}
+
+.registration-page {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    font-family: Poppins;
+}
+
+.title-logo {
+    position: absolute;
+    top: 15vh;
+    left: 35vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 250px;
+}
+
+.title-logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.title-logo h1 {
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.blue-text {
+    color: #024493;
+}
+
+.buttons {
+    display: flex;
+    justify-content: end;
+}
+
+.buttons button {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #024493;
+    background: white;
+    width: 150px;
+    height: 45px;
+    border-radius: .5rem;
+    border: 2px solid #024493;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.buttons .next-btn {
+    color: white;
+    background: #024493;
+}
+
+input[type=submit] {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background: #024493;
+    width: 150px;
+    height: 45px;
+    border-radius: .5rem;
+    border: 2px solid #024493;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.buttons .cancel-btn:hover {
+    background: #0243933f;
+}
+
+.buttons .back-btn:hover {
+    background: #0243933f;
+}
+
+.buttons .next-btn:hover {
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.add-btn {
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    background: #024493;
+    height: 45px;
+    padding: 0 10px;
+    margin-bottom: 25px;
+    border-radius: .5rem;
+    border: 2px solid #024493;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.3);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 5vh 0;
+}
+
+.header .header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-weight: 300;
+    margin: 0 20px 0 0;
+}
+
+.header span {
+    flex: 1;
+    border: 1px solid gray;
+}
+
+form label {
+    font-size: 15px;
+}
+
+form .field-group label {
+    font-size: 16px;
+}
+
+.personal-info {    
+    width: 1000px;
+    padding: 20vh 10vh 10vh 10vh;
+    margin: 7vh auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+
+.input-field input[type=text], .input-field input[type=date], .input-field input[type=email], .input-field select {
+    font-family: Poppins;
+    height: 45px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+}
+
+.p-row1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.p-row1 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.p-row2 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.p-row2 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.p-row3 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.p-row3 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+
+.p-row4 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.p-row4 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}   
+
+.p-row5 {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 0 0 25px 0;
+}
+
+.p-row5 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.school-info {    
+    width: 1000px;
+    padding: 20vh 10vh 10vh 10vh;
+    margin: 7vh auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+
+.s-row1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.s-row1 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+
+.s-row1 .field-group label {
+    margin: 0 50px 0 0;
+}
+
+.s-row2 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.s-row2 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+
+.s-row3 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+    margin: 0 0 25px 0;
+}
+
+.pg-info {
+    width: 1000px;
+    padding: 20vh 10vh 10vh 10vh;
+    margin: 7vh auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+
+.pg-row1 {
+    margin: 0 0 25px 0;
+}
+
+.pg-row1 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+
+.pg-row1 .field-group label {
+    margin: 0 20px 0 0;
+}
+
+.pg-row2 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.pg-row2 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.pg-row3 {
+    margin: 0 0 25px 0;
+}
+
+.pg-row3 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+
+.pg-row3 .field-group label {
+    margin: 0 20px 0 0;
+}
+
+.pg-row4 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.pg-row4 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.pg-row5 {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 0 0 25px 0;
+}
+
+.pg-row5 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.pg-row6 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.pg-row6 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 475px;
+}
+
+.pg-hr {
+    border-top: .5px solid gray;
+    margin: 0 0 25px 0;
+}
+
+.sibling-info {
+    width: 1000px;
+    padding: 20vh 10vh 10vh 10vh;
+    margin: 7vh auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+
+.sibling-info .snls-sss-hr {
+    border-top: 2px solid gray;
+    margin: 0 0 5vh 0;
+}
+
+.snls-row1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.snls-row1 .input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.snls-row1 #sibling-nls-name {
+    width: 400px;
+}
+
+.snls-row1 #sibling-nls-age {
+    width: 50px;
+}
+
+.snls-row1 .input-field .field-group {
+    width: 400px;
+}
+
+.snls-row1 .input-field .field-group label {
+    margin: 0 15px 0 0;
+}
+
+.snls-row2 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.snls-row2 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.snls-row2 .field-group {
+    width: 325px;
+}
+
+.snls-row2 .field-group label {
+    margin: 0 10px 0 0;
+}
+
+.snls-row3 {
+    margin: 0 0 25px 0;
+}
+
+.snls-row3 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.sss-row1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 0 25px 0;
+}
+
+.sss-row1 .input-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.sss-row1 #sibling-sss-name {
+    width: 400px;
+}
+
+.sss-row1 #sibling-sss-age {
+    width: 50px;
+}
+
+.sss-row1 .input-field .field-group {
+    width: 400px;
+}
+
+.sss-row1 .input-field .field-group label {
+    margin: 0 15px 0 0;
+}
+
+.sss-row2 {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 0 0 25px 0;
+}
+
+.sss-row2 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.sss-row2 .input-field #sibling-sss-schoolname {
+    width: 615px;
+}
+
+.sss-row3 {
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 0 0 25px 0;
+}
+
+.sss-row3 .input-field {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.s-hr {
+    border-top: .5px solid gray;
+    margin: 0 0 25px 0;
+}
+
+.scholarship-application {
+    width: 1000px;
+    padding: 20vh 10vh 10vh 10vh;
+    margin: 7vh auto;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+}
+
+.scholarship-application .content {
+    height: 250px;
+}
+
+.cancel-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    padding: 5vh;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.cancel-popup img {
+    width: 100px;
+    height: 100px;
+}
+
+.cancel-popup > * {
+    margin: 10px 0;
+}
+
+.cancel-btn button {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    color: #024493;
+    background: white;
+    width: 150px;
+    height: 45px;
+    border-radius: .5rem;
+    border: 2px solid #024493;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.cancel-btn .home-btn {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: #024493;
+    background: white;
+    padding: 8px 8px;
+    border-radius: .5rem;
+    border: 2px solid #024493;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cancel-btn .continue-btn {
+    color: white;
+    background: #024493;
+}
+
+.cancel-btn a:hover {
+    background: #0243933f;
+}
+
+.cancel-btn .continue-btn:hover {
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
+}
+
+.thankyou-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    padding: 5vh;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.thankyou-popup img {
+    width: 100px;
+    height: 100px;
+}
+
+.thankyou-popup > * {
+    margin: 10px 0;
+}
+
+.thankyou-popup .home-btn {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    background: #024493;
+    padding: 8px 8px;
+    border-radius: .5rem;
+    border: 2px solid #024493;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.thankyou-popup .home-btn:hover {
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2); 
+}
+
+/* Hide all sections initially */
+.personal-info, .school-info, .pg-info, .sibling-info, .scholarship-application, .thankyou-popup, .cancel-popup {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Show the current section with a smooth transition */
+.personal-info.show, .school-info.show, .pg-info.show, .sibling-info.show, .scholarship-application.show, .thankyou-popup.show, .cancel-popup.show {
+    display: block;
+    opacity: 1;
+}
+
+.cancel-popup, .thankyou-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
