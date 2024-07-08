@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth; 
+}
+
 .home {
     background: url('../images/home-bg.png') no-repeat center center; 
     background-size: cover; 
