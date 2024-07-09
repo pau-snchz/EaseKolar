@@ -74,7 +74,7 @@ body {
 }
 
 .spacer {
-    height: 75px;
+    height: 100px;
 }
 
 .box {
@@ -91,6 +91,10 @@ body {
     font-weight: 600;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.box#applicant-box {
+    margin-top: 25px;
 }
 
 table {
@@ -121,6 +125,7 @@ th {
 }
 
 button {
+    font-family: Poppins;
     background-color: #024493;
     color: #fff;
     padding: 10px 20px;
@@ -140,6 +145,25 @@ button span {
     font-size: 14px;
     margin-top: 5px;
     color: #eaeaea;
+}
+
+.create {
+    font-family: Poppins;
+    background-color: #024493;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 50px;
+    padding: 5px 10px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.create:hover {
+    background-color: #023a7f;
 }
 
 .buttons-container {
