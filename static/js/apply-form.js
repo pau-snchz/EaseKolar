@@ -64,13 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    document.querySelectorAll("#submit").forEach(button => {
-        button.addEventListener("click", function(e) {
-            e.preventDefault();
-            showPopup("thankyou-popup");
-        });
-    });
-
     let parentCount = 0;
 
     function addParentSection() {

@@ -42,6 +42,7 @@ body {
 .buttons {
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 
 .buttons button {
@@ -570,46 +571,6 @@ form .field-group label {
 
 .cancel-btn .continue-btn:hover {
     box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2);
-}
-
-.thankyou-popup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 400px;
-    padding: 5vh;
-    border-radius: 50px;
-    box-shadow: 0 0 20px rgb(0, 0, 0, 0.2);
-    margin: 0 auto;
-}
-
-.thankyou-popup img {
-    width: 100px;
-    height: 100px;
-}
-
-.thankyou-popup > * {
-    margin: 10px 0;
-}
-
-.thankyou-popup .home-btn {
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 500;
-    color: white;
-    background: #024493;
-    padding: 8px 8px;
-    border-radius: .5rem;
-    border: 2px solid #024493;
-    margin-left: 10px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.thankyou-popup .home-btn:hover {
-    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.2); 
 }
 
 /* Hide all sections initially */
